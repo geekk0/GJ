@@ -1,0 +1,29 @@
+.catss {
+	display:inline-block;
+	padding-top:3%;
+	width:100%;
+	
+}
+
+.catss_image {
+	text-align:center;
+	width:30%;
+	display:inline-block;
+}
+
+.catss_info {
+	text-align:left;
+	float:right;
+	width:70%;
+	display:inline-block;
+    padding-top:5%;
+	
+	font-family: 'Lobster', coursive;
+	font-size:16pt;
+	line-height:200%;
+}
+
+.catss_info p {
+	padding-left:15%;
+}
+	

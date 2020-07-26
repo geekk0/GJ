@@ -1,0 +1,83 @@
+{% load static %}
+
+
+<html>
+    <head>
+        {% block title %}
+        <title>Gentle Jewel</title>
+        {% endblock %}
+
+        <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+        <link rel="stylesheet" href="{% static 'css/slider.css' %}">
+        <link rel="stylesheet" href="{% static 'css/cattery.css' %}">
+
+
+
+        <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lobster ">
+
+    <style>
+        * {
+      margin: 0;
+      padding: 0;
+     }
+    </style>
+    </head>
+
+
+    <body>
+
+
+    <div class="page-header">
+        <div class="contact_us">
+            <p>Телефон для связи:</p>
+        </div>
+
+
+
+        <div class="social">
+        <a href=""><img src="{% static 'images/inst.svg' %}"></a>
+        <a href="https://www.facebook.com/gentlejewel.ru" target="_blank"><img src="{% static 'images/fb.png' %}"></a>
+        <a href=""><img src="{% static 'images/twitter.svg' %}"></a>
+        <a href=""><img src="{% static 'images/youtube_black.svg' %}"></a>
+        </div>
+    </div>
+
+
+    <div class="logo">
+        <a href="http://127.0.0.1:8000"><img src="{% static 'images/logo.svg' %}"></a>
+    </div>
+    <ul class="mainmenu">
+        <li><a href="http://127.0.0.1:8000"><img src="{% static 'images/main.svg' %}"></a></li>
+        <li><a href="http://127.0.0.1:8000/about/"><img src="{% static 'images/about.svg' %}"></a></li>
+        <li><a href="http://127.0.0.1:8000/pets/"><img src="{% static 'images/pets.svg' %}"></a></li>
+        <li><a href="http://127.0.0.1:8000/blog/"><img src="{% static 'images/events.svg' %}"></a></li>
+        <li><a href="http://127.0.0.1:8000/contacts/"><img src="{% static 'images/contacts.svg' %}"></a></li>
+
+    </ul>
+
+    <div class="main_sep">
+        <hr>
+    </div>
+
+
+    <div class="content">
+
+            {% block content %}
+            {% endblock %}
+
+    </div>
+
+    <footer class="footer">
+
+        <div class="rules">
+            <a href="http://yandex.ru">Правила и условия сайта</a>
+        </div>
+
+        <div class="copyright">
+            <p>Copyright @ 2020 GentleJewel designed by <a href="">gekk0</a></p>
+        </div>
+
+    </footer>
+
+    </body>
+</html>

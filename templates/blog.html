@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<title>События</title>
+{% endblock %}
+
+
+{% block content %}
+<div class="main_text">
+        <h1>В последнее время:</h1>
+</div>
+{% for Post in posts %}
+
+    <p></p>
+    <div class="post_list">
+            <div class="post_list_image">
+                <img src="{{ Post.photo.url }}" width="250" >
+            </div>
+
+            <div class="post_shortcut">
+                <div class="post_title">
+                <p>{{ Post.title }}</p>
+                </div>
+                <br>
+                <div class="post_content">
+                    <p>{{ Post.text }}</p>
+                </div>
+
+            </div>
+
+
+
+
+    </div>
+{% endfor %}
+{% endblock %}
