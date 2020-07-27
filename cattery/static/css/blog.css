@@ -117,7 +117,7 @@ a#inst:hover {
 
 
 
-.main_text {
+.header_text {
     padding-top:70px;
     text-align:center;
 }
@@ -231,3 +231,10 @@ font-family: 'Lobster', coursive;
 	padding:0px;
 }
 	
+.post_created_date {
+	display:block;
+	width:20%;
+	padding-right:3px;
+	margin-left: auto;
+	
+}

@@ -1,3 +1,5 @@
+import datetime
+
 from django.db import models
 from django.utils import timezone
 
@@ -6,7 +8,8 @@ class Post(models.Model):
     title = models.CharField(max_length=200, default='Название события', verbose_name='Название')
     text = models.TextField(max_length=2000, verbose_name='Текст')
     photo = models.ImageField(upload_to='', default='media/default.png', verbose_name='Картинки')
-
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
 
     def publish(self):
             self.published_date = timezone.now()

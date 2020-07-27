@@ -6,18 +6,21 @@
 
 
 {% block content %}
-<div class="main_text">
+<div class="header_text">
         <h1>В последнее время:</h1>
 </div>
 {% for Post in posts %}
 
     <p></p>
-    <div class="post_list">
-            <div class="post_list_image">
-                <img src="{{ Post.photo.url }}" width="250" >
-            </div>
+    <section class="post_list">
 
-            <div class="post_shortcut">
+
+
+            <figure class="post_list_image">
+                <img src="{{ Post.photo.url }}" width="250" >
+            </figure>
+
+            <article class="post_shortcut">
                 <div class="post_title">
                 <p>{{ Post.title }}</p>
                 </div>
@@ -25,12 +28,12 @@
                 <div class="post_content">
                     <p>{{ Post.text }}</p>
                 </div>
+                <time class = "post_created_date">
+                    <p>{{ Post.updated_at }}</p>
 
-            </div>
+                </time>
 
-
-
-
-    </div>
+            </article>
+    </section>
 {% endfor %}
 {% endblock %}

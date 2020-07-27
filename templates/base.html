@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 {% load static %}
 
 
@@ -27,10 +28,11 @@
     <body>
 
 
-    <div class="page-header">
+    <header class="page-header">
         <div class="contact_us">
             <p>Телефон для связи:</p>
         </div>
+
 
 
 
@@ -40,32 +42,32 @@
         <a href=""><img src="{% static 'images/twitter.svg' %}"></a>
         <a href=""><img src="{% static 'images/youtube_black.svg' %}"></a>
         </div>
-    </div>
+    </header>
 
 
     <div class="logo">
         <a href="http://127.0.0.1:8000"><img src="{% static 'images/logo.svg' %}"></a>
     </div>
-    <ul class="mainmenu">
+    <nav class="mainmenu">
         <li><a href="http://127.0.0.1:8000"><img src="{% static 'images/main.svg' %}"></a></li>
         <li><a href="http://127.0.0.1:8000/about/"><img src="{% static 'images/about.svg' %}"></a></li>
         <li><a href="http://127.0.0.1:8000/pets/"><img src="{% static 'images/pets.svg' %}"></a></li>
         <li><a href="http://127.0.0.1:8000/blog/"><img src="{% static 'images/events.svg' %}"></a></li>
         <li><a href="http://127.0.0.1:8000/contacts/"><img src="{% static 'images/contacts.svg' %}"></a></li>
 
-    </ul>
+    </nav>
 
     <div class="main_sep">
         <hr>
     </div>
 
 
-    <div class="content">
+    <main class="content">
 
             {% block content %}
             {% endblock %}
 
-    </div>
+    </main>
 
     <footer class="footer">
 

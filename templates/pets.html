@@ -6,7 +6,7 @@
 
 
 {% block content %}
-<div class="main_text">
+<div class="header_text">
         <h1>Подробно о красавцах</h1>
 </div>
 <p>{{ MEDIA_URL }}</p>
@@ -14,16 +14,17 @@
 {% for CatCard in cats %}
 
     <p></p>
-    <div class="catss">
-            <div class="catss_image">
+    <section class="catss">
+            <figure class="catss_image">
                 <img src="{{ CatCard.photo.url }}" width="300",height="450" >
-            </div>
-            <div class="catss_info">
+            </figure>
+
+            <article class="catss_info">
                 <p>Имя: {{ CatCard.name }}</p>
                 <p>Окрас: {{ CatCard.color|linebreaksbr }}</p>
                 <p>День рождения: {{ CatCard.birthday }}</p>
                 <p>Хозяин: {{ CatCard.owner }}</p>
-            </div>
-    </div>
+            </article>
+    </section>
 {% endfor %}
 {% endblock %}
