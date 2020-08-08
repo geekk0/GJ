@@ -1,5 +1,7 @@
 
-
+a {
+	color: brown;
+}
 
 :focus {
 outline: none;
@@ -105,7 +107,7 @@ a#inst:hover {
 }
 
 .mainmenu li img {
-    height:15%;
+    width:80%;
 }
     
 .main_sep {
@@ -171,7 +173,9 @@ html, body {
      min-height: calc(100vh - 209px);
 }
 
-
+.footer a {
+	color:Maroon;
+}
 
 .footer {
    

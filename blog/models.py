@@ -19,5 +19,14 @@ class Post(models.Model):
             return self.title
 
 
+class Post_images(models.Model):
+    photo_of = models.ForeignKey(Post, on_delete=models.CASCADE, verbose_name='Относится к записи')
+    image = models.ImageField(upload_to='', default='media/default.png', verbose_name='Загрузить фото')
 
-# Create your models here.
+    def publish(self):
+            self.published_date = timezone.now()
+            self.save()
+
+    def __str__(self):
+        return str(self.photo_of)
+

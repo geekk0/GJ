@@ -17,16 +17,17 @@
 
 
             <figure class="post_list_image">
-                <img src="{{ Post.photo.url }}" width="250" >
+                <img src="{{ Post.photo.url }}" width="250">
             </figure>
 
             <article class="post_shortcut">
-                <div class="post_title">
-                <p>{{ Post.title }}</p>
-                </div>
+                <h1><a href="{% url 'post_detail' pk=Post.pk %}">{{ Post.title }}</a></h1>
                 <br>
                 <div class="post_content">
-                    <p>{{ Post.text }}</p>
+                    <nobr><p>{{ Post.text|truncatechars_html:15 }}
+                        {% if Post.text is not Post.text|truncatechars_html:15 %}
+                        {%endif%}</p></nobr>
+
                 </div>
                 <time class = "post_created_date">
                     <p>{{ Post.updated_at }}</p>
