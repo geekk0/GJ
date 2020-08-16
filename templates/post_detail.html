@@ -5,7 +5,14 @@
 {% endblock %}
 
 {% block content %}
+    <br>
+    <br>
     <div class="post">
+        {% if post.updated_at %}
+            <div>
+                {{ post.updated_at }}
+            </div>
+        {% endif %}
         {% if post.published_date %}
             <div class="date">
                 {{ post.published_date }}
@@ -13,9 +20,17 @@
         {% endif %}
         <h1>{{ post.title }}</h1>
         <p>{{ post.text|linebreaksbr }}</p>
+        <p>{{ images.image.url}}</p>
+        <p>{{ MEDIA_URL }}</p>
+        <p>{{ PostImages_set.all }}</p>
+        <img src="{{ MEDIA_URL }}{{ PostImages.image.url}}" width="250" height="100">
         <img src="{{ post.photo.url }}" width="250" >
-{% for Post_image in images %}
-        <img src="{{ Post_images.image.url }}" width="250" >
-{% endfor %}
+
+    {% for Post in posts %}
+        {% for PostImages in Post.PostImages_set.all %}
+            <img src="{{ PostImages.image.url }}" width="250">
+            <img src="{{ PostImages.get_images}}" width="400>"
+        {% endfor %}
+    {% endfor %}
     </div>
 {% endblock %}

@@ -1,6 +1,6 @@
 from django.contrib import admin
-from .models import Post, Post_images
+from .models import Post, PostImages
 
 admin.site.register(Post)
-admin.site.register(Post_images)
+admin.site.register(PostImages)
 

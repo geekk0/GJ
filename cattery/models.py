@@ -16,4 +16,9 @@ class CatCard(models.Model):
     def __str__(self):
             return self.name
 
+    class Meta:
+        verbose_name = 'Личные дела'
+        verbose_name_plural = 'Личные дела'
+
+
 
